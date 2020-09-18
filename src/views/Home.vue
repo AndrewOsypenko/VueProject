@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container >
+    <h1 class="text-center">{{postsCount}}</h1>
+    <PostForm/>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import {mapGetters} from 'vuex'
+import PostForm from "@/components/post";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
-  }
+    PostForm
+  },
+  computed: mapGetters(["postsCount"]),
 }
-</script>
+</script >
+
+<style>
+
+</style>
