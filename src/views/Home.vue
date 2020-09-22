@@ -7,7 +7,7 @@
 
 <script>
 import {mapGetters} from 'vuex'
-import PostForm from "@/components/post";
+import PostForm from "@/components/postBody";
 
 export default {
   name: 'Home',
